@@ -1,7 +1,6 @@
 {
     "name": "Cloze Shuffler for Anki",
     "package": "anki-cloze-shuffler",
-    "repo_name": "sample-addon",
     "min_point_version": 20,
     "version": "1.0.0",
     "author": "NyanKiyoshi",

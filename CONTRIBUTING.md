@@ -7,7 +7,7 @@ To find the full path, in Anki go under: Tools → Add-ons → View files
 
 For example, when using flatpak, the location will be `~/.var/app/net.ankiweb.Anki/data/Anki2/addons21/anki-cloze-shuffler`
 
-Then restart Anki.
+Then Anki should be restarted.
 
 > [!NOTE]
 > Whenever a change is made to the add-on, Anki will need to be restarted.

@@ -13,17 +13,16 @@ A simple and minimal cloze shuffler for Anki. Automatically shuffles ordered and
 
 ## Usage
 
-1. Create a cloze card
-2. Creates clozes inside an unordered or ordered list
-3. Add the tag `shuffle`
-4. Card will now be shuffled (whenever previewed or reviewed/studied)
+1. Create clozes inside an unordered or ordered list
+2. Add the tag `shuffle`
+3. Card will now be shuffled (whenever previewed or reviewed/studied)
 
 ## Installation (GitHub)
 
 1. Download latest [`anki-cloze-shuffler.ankiaddon`](https://github.com/NyanKiyoshi/anki-cloze-shuffler/releases/latest/download/anki-cloze-shuffler.ankiaddon)
 2. Install the file in Anki by going under: Tools → Add-ons → "Install from file"
 
-## Recommended Companion Add-Ons
+## Recommended Companion Add-ons
 
-- [Enhanced Cloze](https://ankiweb.net/shared/info/1990296174), allows to hide all clozes during review
+- [Enhanced Cloze](https://ankiweb.net/shared/info/1990296174), allows hiding all clozes during review
 

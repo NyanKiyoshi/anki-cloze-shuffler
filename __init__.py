@@ -1,7 +1,7 @@
 from aqt import gui_hooks
 from anki.cards import Card
 
-js_sort = """
+JS_SHUFFLER = """
 
 // Shuffles child nodes of a given HTML node (in-place)
 function shuffleNode(node) {
@@ -25,7 +25,10 @@ function shuffleNode(node) {
 
 // Shuffles all 'li' and 'ol' lists that contain cloze(s).
 function shuffleAllLists() {
-    document.querySelectorAll("ul:has(.cloze), ol:has(.cloze)")
+    // Note: we use `class*=cloze` selector in order to support add-ons
+    //       (such as 'Enhanced Cloze').
+    //       When not using any add-ons, `:has(.cloze)` selector is enough.
+    document.querySelectorAll('ul:has([class*="cloze"]), ol:has([class*="cloze"])')
         .forEach((el) => shuffleNode(el));
 }
 
@@ -38,7 +41,7 @@ def on_card_will_show(text: str, card: Card, kind: str) -> str:
     Injects cloze javascript shuffler inside the card's HTML before rendering.
     """
     if card.note().has_tag("shuffle"):
-        text = text + f"<script>{js_sort}</script>"
+        text = text + f"<script>{JS_SHUFFLER}</script>"
     return text
 
 
