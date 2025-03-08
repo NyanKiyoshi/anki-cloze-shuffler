@@ -37,7 +37,9 @@ def on_card_will_show(text: str, card: Card, kind: str) -> str:
     """
     Injects cloze javascript shuffler inside the card's HTML before rendering.
     """
-    return text + f"<script>{js_sort}</script>"
+    if card.note().has_tag("shuffle"):
+        text = text + f"<script>{js_sort}</script>"
+    return text
 
 
 gui_hooks.card_will_show.append(on_card_will_show)
