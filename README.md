@@ -17,6 +17,12 @@ A simple and minimal cloze shuffler for Anki. Automatically shuffles ordered and
 2. Add the tag `shuffle`
 3. Card will now be shuffled (whenever previewed or reviewed/studied)
 
+**Available Tags:**
+
+- `shuffle` - shuffles all lists, even if they do not contain clozes.
+- `shuffle-clozes` - only shuffles lists containing clozes,
+  ignores list that do not contain a cloze.
+
 ## Installation (GitHub)
 
 1. Download latest [`anki-cloze-shuffler.ankiaddon`](https://github.com/NyanKiyoshi/anki-cloze-shuffler/releases/latest/download/anki-cloze-shuffler.ankiaddon)

@@ -1,7 +1,7 @@
 from aqt import gui_hooks
 from anki.cards import Card
 
-JS_SHUFFLER = """
+JS_SHUFFLER = r"""
 
 // Shuffles child nodes of a given HTML node (in-place)
 function shuffleNode(node) {
@@ -24,15 +24,17 @@ function shuffleNode(node) {
 }
 
 // Shuffles all 'li' and 'ol' lists that contain cloze(s).
-function shuffleAllLists() {
+function shuffleAllLists(onlyShuffleClozes) {
+
     // Note: we use `class*=cloze` selector in order to support add-ons
     //       (such as 'Enhanced Cloze').
     //       When not using any add-ons, `:has(.cloze)` selector is enough.
-    document.querySelectorAll('ul:has([class*="cloze"]), ol:has([class*="cloze"])')
-        .forEach((el) => shuffleNode(el));
-}
+    const selector = onlyShuffleClozes
+        ? 'ul:has([class*="cloze"]), ol:has([class*="cloze"])'
+        : 'ul, ol';
 
-shuffleAllLists();
+    document.querySelectorAll(selector).forEach((el) => shuffleNode(el));
+}
 """
 
 
@@ -40,10 +42,19 @@ def on_card_will_show(text: str, card: Card, kind: str) -> str:
     """
     Injects cloze javascript shuffler inside the card's HTML before rendering.
     """
-    if card.note().has_tag("shuffle"):
-        text = text + f"<script>{JS_SHUFFLER}</script>"
+    note = card.note()
+    shuffle = False
+
+    if (shuffle_clozes := note.has_tag("shuffle-clozes")) or note.has_tag("shuffle"):
+
+        # Store as javascript syntax, will be passed to the JS script
+        shuffle_only_clozes = "true" if shuffle_clozes else "false"
+
+        text = text + (
+            f"<script>{JS_SHUFFLER}\n"
+            f"shuffleAllLists({shuffle_only_clozes})</script>"
+        )
     return text
 
 
 gui_hooks.card_will_show.append(on_card_will_show)
-
