@@ -1,7 +1,7 @@
 {
     "name": "List Shuffler for Anki",
     "package": "anki-list-shuffler",
-    "min_point_version": 20,
+    "min_point_version": 36,
     "version": "1.1.0",
     "author": "NyanKiyoshi",
     "homepage": "https://github.com/NyanKiyoshi/anki-list-shuffler"
