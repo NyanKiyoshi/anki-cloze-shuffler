@@ -1,7 +1,7 @@
 [project]
-name = "anki-cloze-shuffler"
+name = "anki-list-shuffler"
 version = "0.1.0"
-description = "Anki addon shuffling cloze cards"
+description = "Anki add-on shuffling lists in cards"
 authors = [
     {name = "NyanKiyoshi", email = "mikail-gh@pm.me"}
 ]

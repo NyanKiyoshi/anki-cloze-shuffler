@@ -1,8 +1,8 @@
 {
-    "name": "Cloze Shuffler for Anki",
-    "package": "anki-cloze-shuffler",
+    "name": "List Shuffler for Anki",
+    "package": "anki-list-shuffler",
     "min_point_version": 20,
-    "version": "1.0.0",
+    "version": "1.1.0",
     "author": "NyanKiyoshi",
-    "homepage": "https://github.com/NyanKiyoshi/anki-cloze-shuffler"
+    "homepage": "https://github.com/NyanKiyoshi/anki-list-shuffler"
 }

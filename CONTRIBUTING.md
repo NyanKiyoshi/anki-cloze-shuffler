@@ -1,11 +1,11 @@
 ## Local Development
 
 To develop using Anki, place the git repository under the Anki's add-on folder:
-`Anki2/addons21/anki-cloze-shuffler`.
+`Anki2/addons21/anki-list-shuffler`.
 
 To find the full path, in Anki go under: Tools → Add-ons → View files
 
-For example, when using flatpak, the location will be `~/.var/app/net.ankiweb.Anki/data/Anki2/addons21/anki-cloze-shuffler`
+For example, when using flatpak, the location will be `~/.var/app/net.ankiweb.Anki/data/Anki2/addons21/anki-list-shuffler`
 
 Then Anki should be restarted.
 

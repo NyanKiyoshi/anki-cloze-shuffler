@@ -1,8 +1,8 @@
 <div align=center>
-<h1>Cloze Shuffler for Anki</h1>
+<h1>List Shuffler for Anki</h1>
 </div>
 
-A simple and minimal cloze shuffler for Anki. Automatically shuffles ordered and unordered lists containing clozes (requires the card to be tagged with `shuffle`).
+A simple and minimal list shuffler for Anki. Automatically shuffles ordered and unordered lists (requires the card to be tagged with `shuffle`).
 
 <div align=center>
 <img
@@ -13,19 +13,19 @@ A simple and minimal cloze shuffler for Anki. Automatically shuffles ordered and
 
 ## Usage
 
-1. Create clozes inside an unordered or ordered list
+1. Create a list in a card
 2. Add the tag `shuffle`
 3. Card will now be shuffled (whenever previewed or reviewed/studied)
 
 **Available Tags:**
 
-- `shuffle` - shuffles all lists, even if they do not contain clozes.
+- `shuffle` - shuffles all lists (even if they do not contain clozes.)
 - `shuffle-clozes` - only shuffles lists containing clozes,
-  ignores list that do not contain a cloze.
+  ignores lists that do not contain a cloze.
 
 ## Installation (GitHub)
 
-1. Download latest [`anki-cloze-shuffler.ankiaddon`](https://github.com/NyanKiyoshi/anki-cloze-shuffler/releases/latest/download/anki-cloze-shuffler.ankiaddon)
+1. Download latest [`anki-list-shuffler.ankiaddon`](https://github.com/NyanKiyoshi/anki-list-shuffler/releases/latest/download/anki-list-shuffler.ankiaddon)
 2. Install the file in Anki by going under: Tools → Add-ons → "Install from file"
 
 ## Recommended Companion Add-ons

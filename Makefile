@@ -2,4 +2,4 @@
 
 build:
 	mkdir -p dist
-	zip --quiet -r -FS dist/anki-cloze-shuffler.ankiaddon ./__init__.py manifest.json
+	zip --quiet -r -FS dist/anki-list-shuffler.ankiaddon ./__init__.py manifest.json
